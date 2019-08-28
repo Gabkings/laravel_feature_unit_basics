@@ -19,10 +19,7 @@ Route::get('/about', function () {
    return "About Me";
 });
 
-Route::get('/blog/{id}', function ($id) {
-    $post = \App\Post::find($id);
-    return view('blog')->withPost($post);
- });
+Route::get('/blog/{id}', 'PostController@index');
 
 Auth::routes();
 
