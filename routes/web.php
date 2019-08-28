@@ -19,6 +19,11 @@ Route::get('/about', function () {
    return "About Me";
 });
 
+Route::get('/blog/{id}', function ($id) {
+    $post = \App\Post::find($id);
+    return view('blog')->withPost($post);
+ });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -12,6 +12,6 @@ class AboutPageTest extends TestCase
         $res = $this->get('/about');
 
         $res->assertStatus(200);
-        $res->assertSee("About Me");
+        $res->assertSee("About Me"); 
     }
 }
